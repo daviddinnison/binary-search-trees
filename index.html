@@ -114,18 +114,47 @@ class BinarySearchTree {
     }
 }
 
+const findHeight = tree => {
+    let rightCounter = 0;
+    let leftCounter = 0;
+
+    if (tree.left !== null) {
+        leftCounter++;
+        tree = tree.left
+        console.log('left counter', leftCounter)
+    }
+
+    if (tree.right !== null) {
+        rightCounter++;
+        tree = tree.right;
+        console.log('right counter', rightCounter)  
+    }
+    // else if (key > tree.key && tree.right) {
+    //     rightCounter++;
+    // }
+    // else {
+    //     throw new Error('Key Error');
+    // }
+}
+
+
 let tree = new BinarySearchTree();
 
-tree.insert(8, 'apple')
-tree.insert(3, 'danish')
-tree.insert(6, 'danish')
-tree.insert(1, 'banana')
-tree.insert(4, 'cookie')
-tree.insert(5, 'danish')
-tree.insert(10, 'danish')
-tree.insert(14, 'danish')
-tree.remove(3)
-console.log(tree)
+tree.insert("e", "e")
+tree.insert("a", "a")
+tree.insert("s", "s")
+tree.insert("y", "y")
 
+tree.insert("q", "q")
+tree.insert("u", "u")
+tree.insert("e", "e")
+tree.insert("s", "s")
+tree.insert("t", "t")
+tree.insert("i", "i")
+tree.insert("o", "o")
+tree.insert("n", "n")
+
+// console.log(tree)
+findHeight(tree);
 
 </script>
